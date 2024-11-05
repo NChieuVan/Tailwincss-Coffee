@@ -3,23 +3,26 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./img/favicon/logo.ico" sizes="20x20" />
     <title>ChieuVan</title>
     <link href="./output.css" type="text/css" rel="stylesheet" />
+    <script src="./main.js" type="text/javascript" async></script>
   </head>
   <body>
     <div id="root">
       <div
-        class="content-wrapper max-w-screen-2xl text-base mx-auto px-8 bg-slate-400"
+        class="content-wrapper font-karla max-w-screen-2xl text-base mx-auto px-8 bg-slate-400"
       >
-        <header class="py-4 mx-10">
-          <nav class="flex flex-row justify-between items-center">
+        <header class="py-4 mx-auto">
+          <nav class="flex flex-row justify-between items-center relative">
             <div
               class="logo basis-2/6 text-center text-xl font-semibold cursor-pointer"
             >
               CoffeeStyle
             </div>
             <ul
-              class="basis-3/6 flex items-center justify-end gap-8 uppercase text-sm text-gray-500 font-medium"
+              id="ncv-top-menu"
+              class="basis-3/6 hidden lg:flex lg:items-center lg:justify-end lg:gap-8 uppercase text-sm text-gray-500 font-medium"
             >
               <li class="ncv-top-menu-item">
                 <a href="#">Home</a>
@@ -42,7 +45,7 @@
             </ul>
 
             <ul
-              class="basis-1/6 flex justify-start items-center ml-16 uppercase text-sm text-gray-500 font-medium"
+              class="basis-3/6 lg:basis-1/6 flex justify-end lg:justify-start items-center ml-16 uppercase text-sm text-gray-500 font-medium"
             >
               <li class="ncv-top-menu-item">
                 <a class="flex items-center" href="#">
@@ -67,6 +70,26 @@
                 >
               </li>
             </ul>
+            <!-- từ màng hình lg trở lên thì ẩn thanh menu -->
+            <div
+              class="basis-1/6 lg:hidden items-center cursor-pointer px-2 sm:px-4"
+            >
+              <svg
+                id="ncv-toggle-menu"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="size-6"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                />
+              </svg>
+            </div>
           </nav>
         </header>
         <main>
